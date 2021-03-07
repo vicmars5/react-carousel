@@ -8,9 +8,9 @@ function App (): JSX.Element {
     <div className="container">
       <div>
           <button
-              onClick={() => setSelectedImageId(selectedImageId - 1)}
+            onClick={() => setSelectedImageId(selectedImageId - 1)}
           >
-              Previous
+            Previous
           </button>
           <button
             onClick={() => setSelectedImageId(selectedImageId + 1)}

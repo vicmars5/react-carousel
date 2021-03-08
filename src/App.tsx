@@ -18,12 +18,20 @@ function getPrevItemIndex (selectedItemIndex: number, itemsLength: number): numb
   return (selectedItemIndex - 1 + itemsLength) % itemsLength
 }
 
-function isNextItem (selectedItemIndex: number, itemIndex: number): boolean{
-  return (selectedItemIndex + 1) === itemIndex
+function isNextItem (
+  selectedItemIndex: number,
+  itemIndex: number,
+  itemsLength: number
+): boolean {
+  return getNextItemIndex(selectedItemIndex, itemsLength) === itemIndex
 }
 
-function isPrevItem (selectedItemIndex: number, itemIndex: number): boolean {
-  return (selectedItemIndex - 1) === itemIndex
+function isPrevItem (
+  selectedItemIndex: number,
+  itemIndex: number,
+  itemsLength: number
+): boolean {
+  return getPrevItemIndex(selectedItemIndex, itemsLength) === itemIndex
 }
 
 function App (): JSX.Element {
@@ -38,10 +46,14 @@ function App (): JSX.Element {
               <img
                 className={classnames(
                   'carousel__item',
-                  i === 0 ? 'carousel__item-default' : '',
+                  // i === 0 ? 'carousel__item-default' : '',
                   i === selectedImageIndex ? 'carousel__item-active' : '',
-                  isPrevItem(selectedImageIndex, i) ? 'carousel__item-prev' : '',
-                  isNextItem(selectedImageIndex, i) ? 'carousel__item-next' : ''
+                  isPrevItem(selectedImageIndex, i, pictures.length)
+                    ? 'carousel__item-prev'
+                    : '',
+                  isNextItem(selectedImageIndex, i, pictures.length)
+                    ? 'carousel__item-next'
+                    : ''
                 )}
                 // I usually don't recommend to use indexes as key but in this
                 // particular case there are no risks involved
@@ -51,24 +63,143 @@ function App (): JSX.Element {
             ))}
           </div>
         </div>
-        <button
-          onClick={() =>
-            setSelectedImageIndex(
-              getPrevItemIndex(selectedImageIndex, pictures.length)
-            )
-          }
-        >
-          Previous
-        </button>
-        <button
-          onClick={(ev) =>
-            setSelectedImageIndex(
-              getNextItemIndex(selectedImageIndex, pictures.length)
-            )
-          }
-        >
-          Next
-        </button>
+        <div>
+          <button
+            onClick={() =>
+              setSelectedImageIndex(
+                getPrevItemIndex(selectedImageIndex, pictures.length)
+              )
+            }
+          >
+            Previous
+          </button>
+          <button
+            onClick={(ev) =>
+              setSelectedImageIndex(
+                getNextItemIndex(selectedImageIndex, pictures.length)
+              )
+            }
+          >
+            Next
+          </button>
+        </div>
+        <div>
+          <h1>title</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A
+            accusamus, aliquid distinctio ex facere id incidunt ipsam laborum
+            minima minus nam natus numquam officiis omnis quisquam ut velit!
+            Enim, vero?
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A
+            accusamus, aliquid distinctio ex facere id incidunt ipsam laborum
+            minima minus nam natus numquam officiis omnis quisquam ut velit!
+            Enim, vero?
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A
+            accusamus, aliquid distinctio ex facere id incidunt ipsam laborum
+            minima minus nam natus numquam officiis omnis quisquam ut velit!
+            Enim, vero?
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A
+            accusamus, aliquid distinctio ex facere id incidunt ipsam laborum
+            minima minus nam natus numquam officiis omnis quisquam ut velit!
+            Enim, vero?
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A
+            accusamus, aliquid distinctio ex facere id incidunt ipsam laborum
+            minima minus nam natus numquam officiis omnis quisquam ut velit!
+            Enim, vero?
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A
+            accusamus, aliquid distinctio ex facere id incidunt ipsam laborum
+            minima minus nam natus numquam officiis omnis quisquam ut velit!
+            Enim, vero?
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A
+            accusamus, aliquid distinctio ex facere id incidunt ipsam laborum
+            minima minus nam natus numquam officiis omnis quisquam ut velit!
+            Enim, vero?
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A
+            accusamus, aliquid distinctio ex facere id incidunt ipsam laborum
+            minima minus nam natus numquam officiis omnis quisquam ut velit!
+            Enim, vero?
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A
+            accusamus, aliquid distinctio ex facere id incidunt ipsam laborum
+            minima minus nam natus numquam officiis omnis quisquam ut velit!
+            Enim, vero?
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A
+            accusamus, aliquid distinctio ex facere id incidunt ipsam laborum
+            minima minus nam natus numquam officiis omnis quisquam ut velit!
+            Enim, vero?
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A
+            accusamus, aliquid distinctio ex facere id incidunt ipsam laborum
+            minima minus nam natus numquam officiis omnis quisquam ut velit!
+            Enim, vero?
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A
+            accusamus, aliquid distinctio ex facere id incidunt ipsam laborum
+            minima minus nam natus numquam officiis omnis quisquam ut velit!
+            Enim, vero?
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A
+            accusamus, aliquid distinctio ex facere id incidunt ipsam laborum
+            minima minus nam natus numquam officiis omnis quisquam ut velit!
+            Enim, vero?
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A
+            accusamus, aliquid distinctio ex facere id incidunt ipsam laborum
+            minima minus nam natus numquam officiis omnis quisquam ut velit!
+            Enim, vero?
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A
+            accusamus, aliquid distinctio ex facere id incidunt ipsam laborum
+            minima minus nam natus numquam officiis omnis quisquam ut velit!
+            Enim, vero?
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A
+            accusamus, aliquid distinctio ex facere id incidunt ipsam laborum
+            minima minus nam natus numquam officiis omnis quisquam ut velit!
+            Enim, vero?
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A
+            accusamus, aliquid distinctio ex facere id incidunt ipsam laborum
+            minima minus nam natus numquam officiis omnis quisquam ut velit!
+            Enim, vero?
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A
+            accusamus, aliquid distinctio ex facere id incidunt ipsam laborum
+            minima minus nam natus numquam officiis omnis quisquam ut velit!
+            Enim, vero?
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A
+            accusamus, aliquid distinctio ex facere id incidunt ipsam laborum
+            minima minus nam natus numquam officiis omnis quisquam ut velit!
+            Enim, vero?
+          </p>
+        </div>
       </div>
     </div>
   )

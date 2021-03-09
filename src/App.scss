@@ -20,6 +20,9 @@ body, * {
 
 .carousel-wrapper {
   overflow: hidden;
+  // explicitly config relative position in safari. Other way overflow hidden will
+  // not work
+  position: relative;
   width: 100%;
 
   & * {

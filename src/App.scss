@@ -35,24 +35,37 @@ body, * {
     top: 0;
     width: 100%;
     margin: auto;
-    //padding: 1rem 4rem;
     z-index: 100;
     transition: transform 0.5s, opacity 0.5s, z-index 0.5s;
 
-    &-default, &-active {
-      opacity: 1;
+    &-back {
+      z-index: 1;
       position: relative;
+      width: 100%;
+      opacity: 0;
+    }
+
+    &-active {
+      opacity: 1;
+      position: absolute;
       z-index: 900;
+      transform: translateX(-100%); // Move 'prev' item to the left
     }
 
     &-prev, &-next {
       z-index: 800;
     }
-    &-prev {
-      transform: translateX(-100%); // Move 'prev' item to the left
+
+    &-hide {
+      z-index: 799;
     }
+
+    &-prev {
+      transform: translateX(-200%); // Move 'prev' item to the left
+    }
+
     &-next {
-      transform: translateX(100%); // Move 'next' item to the right
+      transform: translateX(0%); // Move 'next' item to the right
     }
   }
 }

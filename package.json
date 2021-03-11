@@ -1,11 +1,12 @@
 {
   "name": "carousel",
   "version": "0.0.0",
-  "main": "./dist/index.cjs.js",
+  "main": "./dist/index.js",
   "module": "./dist/index.esm.js",
+  "files": ["./dist/**/*"],
   "scripts": {
     "dev": "vite",
-    "build": "rollup -c",
+    "build": "rm -rf dist && rollup -c",
     "serve": "vite preview",
     "lint:js": "eslint --ext .js,.ts,.tsx .",
     "lint": "yarn lint:js"
@@ -28,6 +29,7 @@
     "eslint-plugin-promise": "4",
     "rollup": "^2.41.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-scss": "^2.6.1",
     "rollup-plugin-visualizer": "^4.2.0",
     "sass": "^1.32.8",
     "stylelint": "^13.12.0",

@@ -2,14 +2,14 @@
 
 Installation:
 ```
-yarn add -D @vicmars5Carouse
+yarn add -D @vicmars5/react-carousel
 ```
 
 Example of how to use Carousel
 ``` ts
 import React from 'react'
-import Carousel, { useCarousel } from '@vicmars5/carousel'
-import '@vicmars5/carousel/dist/Carousel.css'
+import Carousel, { useCarousel } from '@vicmars5/react-carousel'
+import '@vicmars5/react-carousel/dist/Carousel.css'
 
 const pictures = [{
   url: 'https://picsum.photos/id/874/900/600'

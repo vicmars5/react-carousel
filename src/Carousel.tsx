@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import './App.scss'
+import './Carousel.scss'
 import classnames from 'classnames'
 
 function getNextPictureIndex (selectedPictureIndex: number, picturesLength: number): number {

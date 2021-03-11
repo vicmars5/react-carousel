@@ -3,9 +3,9 @@ import external from 'rollup-plugin-peer-deps-external'
 import resolve from '@rollup/plugin-node-resolve'
 import visualizer from 'rollup-plugin-visualizer'
 import scss from 'rollup-plugin-scss'
+import typescript from 'rollup-plugin-typescript2'
 
 import pkg from './package.json'
-import typescript from '@rollup/plugin-typescript'
 
 export default {
   input: './src/Carousel.tsx',
@@ -18,7 +18,10 @@ export default {
   }],
   plugins: [
     external(),
-    typescript(),
+    typescript({
+      rollupCommonJSResolveHack: false,
+      clean: true
+    }),
     resolve({ extensions: ['js', 'ts', 'tsx'] }),
     commonjs(),
     scss(),

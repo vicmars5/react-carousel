@@ -1,6 +1,6 @@
 {
   "name": "@vicmars5/carousel",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "main": "./dist/Carousel.js",
   "module": "./dist/Carousel.esm.js",
   "private": false,

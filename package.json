@@ -1,5 +1,5 @@
 {
-  "name": "@vicmars5/carousel",
+  "name": "@vicmars5/react-carousel",
   "version": "1.0.0",
   "main": "./dist/Carousel.js",
   "module": "./dist/Carousel.esm.js",

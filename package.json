@@ -1,12 +1,13 @@
 {
   "name": "react-photo-carousel",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "main": "./dist/Carousel.js",
   "module": "./dist/Carousel.esm.js",
   "private": false,
   "license": "MIT",
   "author": "Victor Diaz victor.diaz@hey.com",
   "files": ["dist"],
+  "description": "A lightweight ultra simple component to create responsive carousels",
   "scripts": {
     "build": "rm -rf dist && rollup -c",
     "lint:js": "eslint --ext .js,.ts,.tsx .",

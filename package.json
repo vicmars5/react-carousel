@@ -1,6 +1,6 @@
 {
   "name": "@vicmars5/react-carousel",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "main": "./dist/Carousel.js",
   "module": "./dist/Carousel.esm.js",
   "private": false,
@@ -9,7 +9,7 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
   },
-  "files": ["dist"]
+  "files": ["dist"],
   "scripts": {
     "build": "rm -rf dist && rollup -c",
     "lint:js": "eslint --ext .js,.ts,.tsx .",

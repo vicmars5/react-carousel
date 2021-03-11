@@ -1,17 +1,22 @@
 {
-  "name": "carousel",
+  "name": "@vicmars5/carousel",
   "version": "0.0.0",
   "main": "./dist/Carousel.js",
   "module": "./dist/Carousel.esm.js",
+  "private": false,
+  "license": "MIT",
+  "author": "Victor Diaz victor.diaz@hey.com",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "files": [
     "./dist/**/*"
   ],
   "scripts": {
-    "dev": "vite",
     "build": "rm -rf dist && rollup -c",
-    "serve": "vite preview",
     "lint:js": "eslint --ext .js,.ts,.tsx .",
-    "lint": "yarn lint:js"
+    "lint": "yarn lint:js",
+    "prepublish": "yarn build"
   },
   "dependencies": {
     "classnames": "^2.2.6"

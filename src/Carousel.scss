@@ -1,0 +1,54 @@
+.carousel-wrapper {
+  overflow: hidden;
+  // explicitly config relative position in safari. Other way overflow hidden will
+  // not work
+  position: relative;
+  width: 100%;
+
+  & * {
+    box-sizing: border-box;
+  }
+}
+
+.carousel {
+  transform-style: preserve-3d;
+  &__item {
+    opacity: 1;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    margin: auto;
+    z-index: 100;
+    transition: transform 0.5s, opacity 0.5s, z-index 0.5s;
+
+    &-back {
+      z-index: 1;
+      position: relative;
+      width: 100%;
+      opacity: 0;
+    }
+
+    &-active {
+      opacity: 1;
+      position: absolute;
+      z-index: 900;
+      transform: translateX(-100%); // Move 'prev' item to the left
+    }
+
+    &-prev, &-next {
+      z-index: 800;
+    }
+
+    &-hide {
+      z-index: 799;
+    }
+
+    &-prev {
+      transform: translateX(-200%); // Move 'prev' item to the left
+    }
+
+    &-next {
+      transform: translateX(0%); // Move 'next' item to the right
+    }
+  }
+}

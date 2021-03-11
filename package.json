@@ -1,14 +1,11 @@
 {
-  "name": "@vicmars5/react-carousel",
-  "version": "1.0.2",
+  "name": "react-photo-carousel",
+  "version": "1.0.3",
   "main": "./dist/Carousel.js",
   "module": "./dist/Carousel.esm.js",
   "private": false,
   "license": "MIT",
   "author": "Victor Diaz victor.diaz@hey.com",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
-  },
   "files": ["dist"],
   "scripts": {
     "build": "rm -rf dist && rollup -c",

@@ -60,8 +60,19 @@ describe('Carousel', () => {
       const wrapper = shallow(
         <Carousel pictures={pictures} selectedPhotoIndex={0} />
       )
-      expect(wrapper.find('.carousel__item'))
-        .to.have.lengthOf(4)
+      const photos = wrapper.find('.carousel__item')
+      expect(photos).to.have.lengthOf(4)
+      expect(photos.at(0).props().className)
+        .to.contain('carousel__item-active')
+    })
+    it('render carousel at the latest index', () => {
+      const wrapper = shallow(
+        <Carousel pictures={pictures} selectedPhotoIndex={3} />
+      )
+      expect(
+        wrapper.find('.carousel__item').at(3).props().className
+      )
+        .to.contain('carousel__item-active')
     })
   })
 })

@@ -1,4 +1,4 @@
-import 'classnames'
+import './Carousel'
 
 it('hello', () => {
 })

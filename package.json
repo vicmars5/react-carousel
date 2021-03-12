@@ -1,6 +1,6 @@
 {
   "name": "react-photo-carousel",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "main": "./dist/Carousel.js",
   "module": "./dist/Carousel.esm.js",
   "private": false,

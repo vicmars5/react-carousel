@@ -1,5 +1,12 @@
+import * as React from 'react'
 import { expect } from 'chai'
-import { getNextPictureIndex, getPrevPictureIndex, isNextPicture, isPrevPicture } from './Carousel'
+import { shallow } from 'enzyme'
+import Carousel, {
+  getNextPictureIndex,
+  getPrevPictureIndex,
+  isNextPicture,
+  isPrevPicture
+} from './Carousel'
 
 describe('Carousel', () => {
   describe('getNextPictureIndex', () => {
@@ -40,6 +47,21 @@ describe('Carousel', () => {
     it('at the end', () => {
       const isPrev = isPrevPicture(2, 1, 3)
       expect(isPrev)
+    })
+  })
+  describe('render component', () => {
+    const pictures = [
+      { url: 'https://picsum.photos/id/874/540/360' },
+      { url: 'https://picsum.photos/id/814/540/360' },
+      { url: 'https://picsum.photos/id/1006/540/360' },
+      { url: 'https://picsum.photos/id/1005/540/360' }
+    ]
+    it('simple render', () => {
+      const wrapper = shallow(
+        <Carousel pictures={pictures} selectedPhotoIndex={0} />
+      )
+      expect(wrapper.find('.carousel__item'))
+        .to.have.lengthOf(4)
     })
   })
 })

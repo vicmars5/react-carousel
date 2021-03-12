@@ -9,6 +9,7 @@ module.exports = {
   transform: {
     '^.+\\.ts$': 'ts-jest',
     '^.+\\.tsx$': 'ts-jest',
-    "^.+\\.scss$": "sass-jest"
-  }
+    '^.+\\.scss$': 'sass-jest'
+  },
+  setupFilesAfterEnv: ['<rootDir>src/setupTests.js']
 }

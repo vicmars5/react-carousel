@@ -6,7 +6,10 @@
   "private": false,
   "license": "MIT",
   "author": "Victor Diaz - victor.diaz@hey.com",
-  "files": ["dist", "docs"],
+  "files": [
+    "dist",
+    "docs"
+  ],
   "description": "A lightweight ultra simple component to create responsive carousels",
   "repository": "https://github.com/vicmars5/react-carousel",
   "scripts": {
@@ -23,6 +26,7 @@
     "@rollup/plugin-node-resolve": "^11.2.0",
     "@rollup/plugin-typescript": "^8.2.0",
     "@types/classnames": "^2.2.11",
+    "@types/jest": "^26.0.20",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
     "@typescript-eslint/eslint-plugin": "4",
@@ -31,6 +35,7 @@
     "eslint-plugin-import": "2",
     "eslint-plugin-node": "11",
     "eslint-plugin-promise": "4",
+    "jest": "^26.6.3",
     "rollup": "^2.41.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-scss": "^2.6.1",
@@ -39,6 +44,7 @@
     "sass": "^1.32.8",
     "stylelint": "^13.12.0",
     "stylelint-config-standard": "^21.0.0",
+    "ts-jest": "^26.5.3",
     "typescript": "^4.1.2"
   },
   "peerDependencies": {

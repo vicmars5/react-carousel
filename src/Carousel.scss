@@ -1,3 +1,5 @@
+$animation-time: 0.5s;
+
 .carousel-wrapper {
   overflow: hidden;
   // explicitly config relative position in safari. Other way overflow hidden will
@@ -19,7 +21,10 @@
     width: 100%;
     margin: auto;
     z-index: 100;
-    transition: transform 0.5s, opacity 0.5s, z-index 0.5s;
+    transition:
+      transform $animation-time,
+      opacity $animation-time,
+      z-index $animation-time;
 
     &-back {
       z-index: 1;

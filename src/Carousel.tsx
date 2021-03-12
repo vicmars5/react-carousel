@@ -2,11 +2,11 @@ import React, { useState } from 'react'
 import './Carousel.scss'
 import classnames from 'classnames'
 
-function getNextPictureIndex (selectedPictureIndex: number, picturesLength: number): number {
+export function getNextPictureIndex (selectedPictureIndex: number, picturesLength: number): number {
   return (selectedPictureIndex + 1) % picturesLength
 }
 
-function getPrevPictureIndex (selectedPictureIndex: number, picturesLength: number): number {
+export function getPrevPictureIndex (selectedPictureIndex: number, picturesLength: number): number {
   return (selectedPictureIndex - 1 + picturesLength) % picturesLength
 }
 

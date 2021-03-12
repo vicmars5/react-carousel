@@ -10,7 +10,7 @@ export function getPrevPictureIndex (selectedPictureIndex: number, picturesLengt
   return (selectedPictureIndex - 1 + picturesLength) % picturesLength
 }
 
-function isNextPicture (
+export function isNextPicture (
   selectedPictureIndex: number,
   pictureIndex: number,
   picturesLength: number
@@ -18,7 +18,7 @@ function isNextPicture (
   return getNextPictureIndex(selectedPictureIndex, picturesLength) === pictureIndex
 }
 
-function isPrevPicture (
+export function isPrevPicture (
   selectedPictureIndex: number,
   pictureIndex: number,
   picturesLength: number
